@@ -5,8 +5,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
 
 <head>
@@ -18,35 +17,10 @@
     z-index: 0;
 
   }
-
-  .navbar-dark1 {
-    background-color: rgb(192, 29, 29);
-  }
-
-
-
   .row-header {
     margin: 0px auto;
     padding: 0px;
   }
-
-  .footer {
-    background-color: lightblue;
-    margin: 0px auto;
-    padding: 20px 0px 20px 0px;
-  }
-
-  hr {
-    border: 1px;
-    background-color: black;
-    border: none;
-  }
-
-  li {
-
-    padding: 3% 15%;
-  }
-
   #navbar {
     background-color: #333;
     position: fixed;
@@ -55,51 +29,35 @@
     display: block;
     transition: top 0.3s;
   }
-
-  .nav-background:hover {
+  .nav-item:hover {
     background-color: rgb(224, 125, 228);
 
   }
-
   .full-page1 {
     height: 2000px;
     background-color: black;
   }
-
-  .full-page2 {
-    height: 2000px;
-    background-color: rgb(94, 84, 84);
-  }
-
-
   .navbar-nav {
     margin-top: 10px;
   }
-
   .navbar-nav a {
-    /* color: #951C49; */
-    text-align: center;
-    
+    color: #951C49; 
+    text-align: center;   
   }
-
-#navbar1 {
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: block;
-  transition: top 0.3s;
-}
-
-#navbar1 li{
-  display: block;
-}
+  #navbar1 {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+  }
 </style>
 
 <body>
   <div id="navbar1">
-    <nav class="navbar navbar-expand-md static-top navbar-light bg-dark ">
-      <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light bg-dark ">
+      <div class="container-fluid">
         <a class="navbar-brand pull-left" href="#">PORTFOLIO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,39 +65,12 @@
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class=" nav-list navbar-nav navbar-right">
-            <li class="nav-item active nav-background">
-              <a class="nav-link" href="#">HOME</a>
-            </li>
-            <li class="nav-item nav-background">
-              <a class="nav-link" href="#">ABOUT</a>
-            </li>
-
-            <li class="nav-item nav-background">
-              <a class="nav-link" href="#">SKILLS</a>
-            </li>
-            <li class="nav-item nav-background">
-              <a class="nav-link" href="#">CONTACT</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li> -->
-            <!-- </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">ABOUT</a>
+            <a class="nav-item nav-link" href="#">SKILLS</a>
+            <a class="nav-item nav-link" href="#">CONTACT</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -154,9 +85,9 @@
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+        document.getElementById("navbar1").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-80px";
+        document.getElementById("navbar1").style.top = "-80px";
       }
       prevScrollpos = currentScrollPos;
     }
