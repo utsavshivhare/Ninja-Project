@@ -29,20 +29,24 @@
     display: block;
     transition: top 0.3s;
   }
+  .nav-item{
+    display: flex;
+    justify-content: space-between;
+  }
   .nav-item:hover {
     background-color: rgb(224, 125, 228);
-
   }
   .full-page1 {
     height: 2000px;
     background-color: black;
   }
-  .navbar-nav {
-    margin-top: 10px;
+  .navbar-nav{
+    display: flex;
+    justify-content: flex-end;
   }
   .navbar-nav a {
     color: #951C49; 
-    text-align: center;   
+    text-align: center; 
   }
   #navbar1 {
     background-color: #333;
@@ -65,7 +69,7 @@
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <div class="navbar-nav">
+          <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">ABOUT</a>
             <a class="nav-item nav-link" href="#">SKILLS</a>
@@ -77,9 +81,7 @@
   </div>
   </header>
   <div class="container full-page1">wsd</div>
-  <div class="container full-page2">wsd</div>
-
-
+  
   <script>
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
