@@ -29,10 +29,6 @@
     display: block;
     transition: top 0.3s;
   }
-  .nav-item{
-    display: flex;
-    justify-content: space-between;
-  }
   .nav-item:hover {
     background-color: rgb(224, 125, 228);
   }
@@ -40,13 +36,11 @@
     height: 2000px;
     background-color: black;
   }
-  .navbar-nav{
-    display: flex;
-    justify-content: flex-end;
-  }
   .navbar-nav a {
     color: #951C49; 
     text-align: center; 
+    display: flexbox;
+    justify-content: flex-end;
   }
   #navbar1 {
     background-color: #333;
@@ -55,6 +49,24 @@
     width: 100%;
     display: block;
     transition: top 0.3s;
+  }
+  @media (min-width: 1200px){
+    .navbar a {
+        margin-left : 1.5em;
+        margin-right : 1.5em;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px){
+    .navbar a {
+        margin-left : 1.75em;
+        margin-right : 1.75em;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px){
+    .navbar a {
+        margin-left : 1.25em;
+        margin-right : 1.25em;
+    }
   }
 </style>
 
@@ -68,8 +80,8 @@
           <span class="navbar-toggler-icon "></span>
         </button>
 
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <div class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <div class="navbar-nav  ml-auto">
             <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">ABOUT</a>
             <a class="nav-item nav-link" href="#">SKILLS</a>
