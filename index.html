@@ -7,70 +7,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
-
+<link rel="stylesheet" type="text/css" href="index.css">
 <head>
   <title>Project</title>
+  
 </head>
-<style>
-  body {
-    padding: 60px 0px 0px 0px;
-    z-index: 0;
 
-  }
-  .row-header {
-    margin: 0px auto;
-    padding: 0px;
-  }
-  #navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-  }
-  .nav-item:hover {
-    background-color: rgb(125, 207, 228);
-  }
-  .full-page1 {
-    height: 2000px;
-    background-color: black;
-  }
-  .navbar-nav a {
-    color: #951C49; 
-    text-align: center; 
-    display: flexbox;
-    justify-content: flex-end;
-  }
-  #navbar1 {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-  }
-  @media (min-width: 1200px){
-    .navbar a {
-        margin-left : 1.5em;
-        margin-right : 1.5em;
-    }
-  }
-  @media (min-width: 992px) and (max-width: 1199px){
-    .navbar a {
-        margin-left : 1.75em;
-        margin-right : 1.75em;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 991px){
-    .navbar a {
-        margin-left : 1.25em;
-        margin-right : 1.25em;
-    }
-  }
-</style>
 
-<body>
+<body><header>
   <div id="navbar1">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-static-top">
       <div class="container-fluid">
@@ -80,12 +24,14 @@
           <span class="navbar-toggler-icon "></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">ABOUT</a>
-            <a class="nav-item nav-link" href="#">SKILLS</a>
-            <a class="nav-item nav-link" href="#">CONTACT</a>
+            <ul>
+           <li> <a class="nav-item nav-link active" href="#">HOME</a></li>
+            <li><a class="nav-item nav-link" href="#">ABOUT</a></li>
+            <li><a class="nav-item nav-link" href="#">SKILLS</a></li>
+            <li><a class="nav-item nav-link" href="#">CONTACT</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -101,7 +47,7 @@
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar1").style.top = "0";
       } else {
-        document.getElementById("navbar1").style.top = "-80px";
+        document.getElementById("navbar1").style.top = "-120px";
       }
       prevScrollpos = currentScrollPos;
     }
