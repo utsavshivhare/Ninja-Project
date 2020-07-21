@@ -3,16 +3,12 @@
 }
 
 body {
-    padding: 60px 0px 0px 0px;
     z-index: 0;
-
   }
   .row-header {
     margin: 0px auto;
     padding: 0px;
   }
-
-  
 
   ul{
     margin:0;
@@ -69,11 +65,10 @@ body {
     transition: transform 0.5s;
     transform-origin:right;
     transform:scaleX(0);
-    z-index:-1 ;
+    z-index:-1;
   }
 
   ul li a:hover:before{
-
     transition: transform 0.5s;
     transform-origin:left;
     transform:scaleX(1);
@@ -82,32 +77,27 @@ body {
   .full-page1 {
     height: 2000px;
     background-color: black;
+    margin: auto;
   }
 
   #navbar1 {
-    background-color: #333;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     display: block;
     transition: top 0.3s;
-    
+    margin-top: 0px;
+    margin-bottom: 30px;
   }
   @media (min-width: 1200px){
     .navbar a {
-        margin-left : 1.5em;
-        margin-right : 1.5em;
+        margin-left : 1em;
+        margin-right : 1em;
     }
   }
   @media (min-width: 992px) and (max-width: 1199px){
     .navbar a {
-        margin-left : 1.75em;
-        margin-right : 1.75em;
+        margin-left : 0.4em;
+        margin-right : 0.4em;
     }
   }
-  /* @media (min-width: 768px) and (max-width: 991px){
-    .navbar a {
-        margin-left : 1.25em;
-        margin-right : 1.25em;
-    }
-  } */
