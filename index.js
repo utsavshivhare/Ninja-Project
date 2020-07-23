@@ -1,6 +1,6 @@
 $(document).ready(function () {
   
-    
+    //Navbar scroll hide effect code below
     
      var c, currentScrollTop = 0,
          navbar = $('nav');
@@ -19,10 +19,21 @@ $(document).ready(function () {
         c = currentScrollTop;
     });
 
+
+    // Navbar active nav-item code below
+    $( '#navbar1 .navbar-nav a' ).on( 'click', function () {
+      $( '#navbar1 .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+      $( this ).parent( 'li' ).addClass( 'active' );
+    });
+
+
+
+    // Loader code below
     $(window).on("load",function(){
         $(".loader-wrapper").fadeOut("slow");
     });
-    
+
+
   });
 
   
