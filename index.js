@@ -42,6 +42,17 @@ $(document).ready(function () {
       });
     });
 
+    //Adding and removing active class on nav-items
+    $(document).on('click','ul li',function(){
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    // $('.navbar-toggler-icon').click(function()
+    // {
+    //      $('header').toggleClass('blur-in blur-out'); //Adds 'a', removes 'b' and vice versa
+    // });
+
+
 
 // for photo
 var $wrap = $('.wrapper'),
@@ -80,3 +91,35 @@ $(window).on('mousemove click', function(e) {
 animate();
 
 });
+
+
+// function toggle(){
+//   var blur=document.getElementById('blur');
+//   blur.classList.toggle('active-blur')
+// }
+
+
+$(".scrolldown").click(function(){
+  $('html,body').animate({
+    scrollTop: $("#about").offset().top},
+    30);
+
+});
+
+
+// go to top
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
